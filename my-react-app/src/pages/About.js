@@ -9,7 +9,8 @@ import { Fade } from "@mui/material";
 
 const About = () => {
   useEffect(() => {
-    import('bootstrap/dist/css/bootstrap.min.css');
+      import('bootstrap/dist/css/bootstrap.min.css').then(() => {
+    });
   }, []);
 
     const [isVisible, setIsVisible] = useState(false);

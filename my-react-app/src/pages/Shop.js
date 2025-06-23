@@ -14,14 +14,13 @@ import { blue } from "@mui/material/colors";
 
 
 const Shop = () => {
-  useEffect(() => {
-    import('bootstrap/dist/css/bootstrap.min.css');
-  }, []);
-
   const [isVisible, setIsVisible] = useState(false);
   const fadeRef = useRef(null);
 
   useEffect(() => {
+    import('bootstrap/dist/css/bootstrap.min.css').then(() => {
+      // Optional: you can log or do something here
+    });
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {

@@ -7,7 +7,7 @@ import Shop from './pages/Shop';
 import About from './pages/About';
 import Gallery from './pages/Gallery';
 import Support from './pages/Support';
-import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -15,13 +15,13 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
-        <Routes>
+        <Switch>
           <Route path="/" exact Component={Home} />
           <Route path="/shop" exact Component={Shop} />
           <Route path="/gallery" exact Component={Gallery} />
           <Route path="/about" exact Component={About} />
           <Route path="/support" exact Component={Support} />
-        </Routes>
+        </Switch>
         <Footer />
       </Router>
     </div>

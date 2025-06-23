@@ -12,7 +12,9 @@ import '../styles/Shop.css';
 
 const Shop = () => {
   useEffect(() => {
-    import('bootstrap/dist/css/bootstrap.min.css');
+    import('bootstrap/dist/css/bootstrap.min.css').then(() => {
+      // Optional: you can log or do something here
+    });
   }, []);
 
   const [isVisible, setIsVisible] = useState(false);

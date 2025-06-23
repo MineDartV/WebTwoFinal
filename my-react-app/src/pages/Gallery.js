@@ -12,13 +12,14 @@ import '../styles/Shop.css';
 import { blue } from "@mui/material/colors";
 
 
-const Shop = () => {
-  useEffect(() => {
-    import('bootstrap/dist/css/bootstrap.min.css');
-  }, []);
-
+const Gallery = () => {
   const [isVisible, setIsVisible] = useState(false);
   const fadeRef = useRef(null);
+  useEffect(() => {
+    import('bootstrap/dist/css/bootstrap.min.css').then(() => {
+    // Optional: do something when it's loaded
+    });
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -89,4 +90,4 @@ const Shop = () => {
   );
 };
 
-export default Shop;
+export default Gallery;
